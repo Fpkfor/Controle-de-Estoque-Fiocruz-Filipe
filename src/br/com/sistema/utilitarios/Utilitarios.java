@@ -7,6 +7,7 @@ package br.com.sistema.utilitarios;
 
 import java.awt.Component;
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
 /**
@@ -24,5 +25,9 @@ public class Utilitarios {
                ((JTextField)component).setText(null);
             }
         }
+    }
+
+    public void LimparFormulario(JTabbedPane painel_guias) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
