@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Pichau/Documents/NetBeansProjects/Controle%20de%20Estoque%20SixZen/src/br/com/sistema/model/Produtos.java</file>
-            <file>file:/C:/Users/Pichau/Documents/NetBeansProjects/Controle%20de%20Estoque%20SixZen/src/br/com/sistema/view/FormularioEstoque.java</file>
-            <file>file:/C:/Users/Pichau/Documents/NetBeansProjects/Controle%20de%20Estoque%20SixZen/src/br/com/sistema/model/Fornecedores.java</file>
-            <file>file:/C:/Users/Pichau/Documents/NetBeansProjects/Controle%20de%20Estoque%20SixZen/src/br/com/sistema/dao/ProdutosDAO.java</file>
-            <file>file:/C:/Users/Pichau/Documents/NetBeansProjects/Controle%20de%20Estoque%20SixZen/src/br/com/sistema/view/FormularioProdutos.java</file>
-            <file>file:/C:/Users/Pichau/Documents/NetBeansProjects/Controle%20de%20Estoque%20SixZen/src/br/com/sistema/view/AreaTrabalho.java</file>
+            <file>file:/C:/Users/fnfa_/Documents/GitHub/Controle-de-Estoque-Empresa-SZ%20-%20Copia/src/br/com/sistema/view/FormularioVendas.java</file>
+            <file>file:/C:/Users/fnfa_/Documents/GitHub/Controle-de-Estoque-Empresa-SZ%20-%20Copia/src/br/com/sistema/dao/VendasDAO.java</file>
+            <file>file:/C:/Users/fnfa_/Documents/GitHub/Controle-de-Estoque-Empresa-SZ%20-%20Copia/src/br/com/sistema/dao/FuncionariosDAO.java</file>
+            <file>file:/C:/Users/fnfa_/Documents/GitHub/Controle-de-Estoque-Empresa-SZ%20-%20Copia/src/br/com/sistema/view/FormularioTotalDoDia.java</file>
+            <file>file:/C:/Users/fnfa_/Documents/GitHub/Controle-de-Estoque-Empresa-SZ%20-%20Copia/src/br/com/sistema/view/AreaTrabalho.java</file>
         </group>
     </open-files>
 </project-private>

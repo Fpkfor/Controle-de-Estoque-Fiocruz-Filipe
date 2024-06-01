@@ -231,9 +231,21 @@ public class FuncionariosDAO {
             stmt.setString(2,senha);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
-                JOptionPane.showMessageDialog(null,"Bem-vindo ao sistema!");
+                if(rs.getString("nivel_acesso").equals("Adminstrador")){
                 AreaTrabalho at = new AreaTrabalho();
+                at.usuarioLogado = rs.getString("nome");
+                JOptionPane.showMessageDialog(null,"Bem-vindo ao sistema!\n"+at.usuarioLogado);
                 at.setVisible(true);
+                }
+                else if(rs.getString("nivel_acesso").equals("Usuário")){
+                AreaTrabalho at = new AreaTrabalho();
+                at.usuarioLogado = rs.getString("nome");
+                at.menu_fornecedores.setVisible(false);
+                at.menu_funcionario.setEnabled(false);
+                at.menu_estoque.setEnabled(false);               
+                JOptionPane.showMessageDialog(null,"Bem-vindo ao sistema!\n"+at.usuarioLogado);
+                at.setVisible(true);
+                }
             } else{
                 FormularioLogin login = new FormularioLogin();
                 JOptionPane.showMessageDialog(null,"Dados inválidos, verifique se você digitou algo errado e tente novamente" );
