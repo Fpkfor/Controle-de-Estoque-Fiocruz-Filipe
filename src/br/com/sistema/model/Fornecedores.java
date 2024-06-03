@@ -20,4 +20,10 @@ public class Fornecedores extends Clientes {
         this.cnpj = cnpj;
     }
     
+    // Uso de sobrecarga para conseguirmos extrair o nome exato dos fornecedores para o formulário/guia de produtos
+    @Override
+    public String toString(){
+        return this.getNome();
+    }
+    
 }

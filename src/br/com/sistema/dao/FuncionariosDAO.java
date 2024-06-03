@@ -8,6 +8,8 @@ package br.com.sistema.dao;
 import br.com.sistema.jdbc.ConexaoBanco;
 import br.com.sistema.model.Clientes;
 import br.com.sistema.model.Funcionarios;
+import br.com.sistema.view.AreaTrabalho;
+import br.com.sistema.view.FormularioLogin;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -217,5 +219,41 @@ public class FuncionariosDAO {
             JOptionPane.showMessageDialog(null,"Houve um erro ao criar a lista");
         }
         return null;
+    }
+    
+    
+    //método para efetuar login no formulario login
+    public void EfetuarLogin(String email,String senha){
+        try {
+            String sql = "select * from tb_funcionarios where email=? and senha=?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1,email);
+            stmt.setString(2,senha);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                if(rs.getString("nivel_acesso").equals("Adminstrador")){
+                AreaTrabalho at = new AreaTrabalho();
+                at.usuarioLogado = rs.getString("nome");
+                JOptionPane.showMessageDialog(null,"Bem-vindo ao sistema!\n"+at.usuarioLogado);
+                at.setVisible(true);
+                }
+                else if(rs.getString("nivel_acesso").equals("Usuário")){
+                AreaTrabalho at = new AreaTrabalho();
+                at.usuarioLogado = rs.getString("nome");
+                at.menu_fornecedores.setVisible(false);
+                at.menu_funcionario.setEnabled(false);
+                at.menu_estoque.setEnabled(false);               
+                JOptionPane.showMessageDialog(null,"Bem-vindo ao sistema!\n"+at.usuarioLogado);
+                at.setVisible(true);
+                }
+            } else{
+                FormularioLogin login = new FormularioLogin();
+                JOptionPane.showMessageDialog(null,"Dados inválidos, verifique se você digitou algo errado e tente novamente" );
+                login.setVisible(true);
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"erro"+e);
+        }
+        
     }
 }
